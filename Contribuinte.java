@@ -1,21 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package contribuinte;
 
-/**
- *
- * @author alunos
- */
 public class Contribuinte {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+   private String nome;
+   protected double rendabrutaanual;
+   protected double rendaliquidaanual;
+   
+   public void setnome(String nome){
+        this.nome = nome;
+   }
+   public String getnome(){
+       return nome;
+   }
+   public void setrendabrutaanual(double rendabrutaanual){
+       this.rendabrutaanual = rendabrutaanual;
+   }
+   public double getrendabrutaanual(){
+       return rendabrutaanual;
+   }
+   public double getrendaliquidaanual(){
+       return rendaliquidaanual;
+   }
+   public double calcularendaliquida(double abatimento1, double abatimento2){
+        rendaliquidaanual = rendabrutaanual - (abatimento1 + abatimento2);
+        return rendaliquidaanual;
     }
-    
 }
